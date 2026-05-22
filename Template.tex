@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+
+\usepackage[en-GB]{datetime2}
+\usepackage[backend=biber,style=apa]{biblatex}
+\usepackage[hidelinks]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{atkinson}
+\usepackage{microtype}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+\DTMsetstyle{iso}
+\addbibresource{References.bib}
+\nocite{*}
+\onehalfspacing
+\setlist{nosep}
+\renewcommand{\labelitemi}{--}
+
+\newcommand{\Title}{Title}
+\newcommand{\Author}{Author}
+\newcommand{\Version}{1.0.0}
+\newcommand{\License}{This work is licensed under CC BY-SA 4.0. To view a copy of this license, visit \url{https://creativecommons.org/licenses/by-sa/4.0/}}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+
+    {\Huge\bfseries \Title\par}
+    \vspace{1.5cm}
+
+    {\Large \Author\par}
+    \vfill
+
+    {\large \Version\par}
+    {\large \today\par}
+    \vspace{1cm}
+
+    {\small \License\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+\newpage
+\printbibliography
+
+\end{document}
